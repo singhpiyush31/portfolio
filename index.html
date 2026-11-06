@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f0f0e">
+  <title>Piyush Singh | Software Developer</title>
+  <meta name="description" content="Piyush Singh is a software developer and second-year student at PSIT Kanpur, building REST APIs with Node.js, Express and MongoDB.">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Geist+Mono:wght@500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="top-links" id="top-links" aria-label="Main">
+    <a href="#about">About me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="deco" id="deco" aria-hidden="true">
+        <span class="float-tile t1" data-icon="api" data-label="REST APIs"></span>
+        <span class="float-tile t2" data-icon="lock" data-label="Auth"></span>
+        <span class="float-tile t3" data-icon="data" data-label="Database"></span>
+        <span class="float-tile t4" data-icon="search" data-label="Search"></span>
+      </div>
+
+      <div class="hero-copy">
+        <p class="badge">Software developer</p>
+        <h1 class="hero-name" id="hero-name">Piyush Singh</h1>
+        <p class="hero-role">
+          <span class="sr-only" id="role-static"></span>
+          <span aria-hidden="true">I build <em id="typed"></em></span>
+        </p>
+        <p class="hero-sub" id="hero-sub"></p>
+        <div class="hero-actions">
+          <div class="note">
+            <svg viewBox="0 0 60 40" aria-hidden="true"><path pathLength="1" d="M6 36C8 20 22 8 50 7M42 2l9 5-7 8"/></svg>
+            <span id="note"></span>
+          </div>
+          <a class="btn orange" href="#projects">View my projects</a>
+          <a class="btn contrast" href="#services">What I build</a>
+        </div>
+      </div>
+
+      <div class="built-with">
+        <p class="rule"><span>Built with</span></p>
+        <ul id="built-with"></ul>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="head reveal">
+        <p class="badge">About</p>
+        <h2>A student who learns by <em>building</em></h2>
+      </div>
+      <div class="about-card reveal">
+        <img class="about-photo" id="about-photo" alt="" hidden>
+        <p id="about-text"></p>
+      </div>
+      <dl class="numbers" id="numbers"></dl>
+    </section>
+
+    <section class="section" id="services">
+      <div class="head reveal">
+        <p class="badge">What I build</p>
+        <h2>The parts behind the <em>screen</em></h2>
+      </div>
+      <div class="service-grid" id="service-grid"></div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="head reveal">
+        <p class="badge">Projects</p>
+        <h2>Six projects, each one a <em>step</em> up</h2>
+      </div>
+      <div class="bento" id="bento"></div>
+    </section>
+
+    <section class="section" id="path">
+      <div class="head reveal">
+        <p class="badge">Path and skills</p>
+        <h2>How I got <em>here</em></h2>
+      </div>
+      <div class="path-grid">
+        <ol class="steps card reveal" id="steps"></ol>
+        <div class="side">
+          <div class="card reveal">
+            <h3>Skills</h3>
+            <dl class="skills" id="skills"></dl>
+          </div>
+          <div class="card reveal">
+            <h3>Currently learning</h3>
+            <ul class="learning" id="learning"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="cta reveal">
+        <p class="badge on-dark">Contact</p>
+        <h2>Got an idea? Let's <em>talk</em></h2>
+        <p class="cta-text" id="talk"></p>
+        <div class="cta-actions">
+          <a class="btn orange" id="mail">Email me</a>
+          <button class="btn light" id="copy" type="button">Copy email</button>
+          <a class="btn light" id="cv" download hidden>Download CV</a>
+        </div>
+        <p class="cta-links">
+          <a id="github" target="_blank" rel="noopener">GitHub ↗</a>
+          <a id="linkedin" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>Piyush Singh</span>
+    <code id="motto"></code>
+  </footer>
+
+  <a class="to-top" id="to-top" href="#home" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5.500 11.500 12 5l6.500 6.500"/></svg>
+  </a>
+
+  <dialog class="project" id="project" aria-labelledby="project-title">
+    <div class="project-bar">
+      <button type="button" class="btn small plain" id="project-prev">Previous</button>
+      <button type="button" class="btn small plain" id="project-next">Next</button>
+      <button type="button" class="btn small contrast" id="project-close">Close</button>
+    </div>
+    <div class="project-body">
+      <p class="badge" id="project-badge"></p>
+      <h2 id="project-title"></h2>
+      <p id="project-summary"></p>
+      <ul class="points" id="project-points"></ul>
+      <dl class="meta" id="project-meta"></dl>
+      <a class="btn orange" id="project-repo" target="_blank" rel="noopener">View code on GitHub</a>
+    </div>
+  </dialog>
+
+  <noscript><p class="noscript">This page needs JavaScript to show projects. See them on <a href="https://github.com/singhpiyush31">GitHub</a>.</p></noscript>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script src="spider.js"></script>
+</body>
+</html>
